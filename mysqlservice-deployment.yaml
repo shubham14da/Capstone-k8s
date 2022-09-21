@@ -1,17 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  
-  
   labels:
     name: mysqlservice
   name: mysqlservice
 spec:
   replicas: 1
-  strategy: {}
+  selector:
+    matchLabels:
+      name: mysqlservice
   template:
     metadata:
-      
       labels:
         name: mysqlservice
     spec:

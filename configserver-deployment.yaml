@@ -1,17 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  
-  
   labels:
     name: configserver
   name: configserver
 spec:
   replicas: 1
-  strategy: {}
+  selector:
+    matchLabels:
+      name: configserver
   template:
     metadata:
-      
       labels:
         name: configserver
     spec:

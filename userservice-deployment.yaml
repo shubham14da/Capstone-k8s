@@ -1,17 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  
-  
   labels:
     name: userservice
   name: userservice
 spec:
   replicas: 1
-  strategy: {}
+  selector:
+    matchLabels:
+      name: userservice
   template:
     metadata:
-      
       labels:
         name: userservice
     spec:

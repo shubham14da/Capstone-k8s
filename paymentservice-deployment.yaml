@@ -1,17 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  
-  
   labels:
     name: paymentservice
   name: paymentservice
 spec:
   replicas: 1
-  strategy: {}
+  selector:
+    matchLabels:
+      name: paymentservice
   template:
     metadata:
-      
       labels:
         name: paymentservice
     spec:

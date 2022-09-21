@@ -1,17 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  
-  
   labels:
     name: product-webapp
   name: product-webapp
 spec:
   replicas: 1
-  strategy: {}
+  selector:
+    matchLabels:
+      name: product-webapp
   template:
     metadata:
-      
       labels:
         name: product-webapp
     spec:

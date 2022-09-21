@@ -1,17 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  
-  
   labels:
     name: mongodbservice
   name: mongodbservice
 spec:
   replicas: 1
-  strategy: {}
+  selector:
+    matchLabels:
+      name: mongodbservice
   template:
     metadata:
-      
       labels:
         name: mongodbservice
     spec:

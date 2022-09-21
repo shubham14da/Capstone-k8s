@@ -1,17 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  
-  
   labels:
     name: eurekaserver
   name: eurekaserver
 spec:
   replicas: 1
-  strategy: {}
+  selector:
+    matchLabels:
+      name: eurekaserver
   template:
     metadata:
-      
       labels:
         name: eurekaserver
     spec:

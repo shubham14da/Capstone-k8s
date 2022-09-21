@@ -1,17 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  
-  
   labels:
     name: authenticationservice
   name: authenticationservice
 spec:
   replicas: 1
-  strategy: {}
+  selector:
+    matchLabels:
+      name: appointmentservice
   template:
     metadata:
-      
       labels:
         name: authenticationservice
     spec:
