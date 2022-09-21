@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  
+  
+  labels:
+    name: authenticationservice
+  name: authenticationservice
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      
+      labels:
+        name: authenticationservice
+    spec:
+      containers:
+      - image: ashishrits081/authenticationservice:latest
+        name: authentication-service-container
+        ports:
+        - containerPort: 8095
+        resources: {}
+      restartPolicy: Always
+status: {}

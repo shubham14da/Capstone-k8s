@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  
+  
+  labels:
+    name: api-gateway
+  name: api-gateway
+spec:
+  ports:
+  - name: "8080"
+    port: 8080
+    targetPort: 8080
+  selector:
+    name: api-gateway
+status:
+  loadBalancer: {}

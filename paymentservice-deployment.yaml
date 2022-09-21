@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  
+  
+  labels:
+    name: paymentservice
+  name: paymentservice
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      
+      labels:
+        name: paymentservice
+    spec:
+      containers:
+      - image: ashishrits081/paymentservice:latest
+        name: payment-service-container
+        ports:
+        - containerPort: 8070
+        resources: {}
+      restartPolicy: Always
+status: {}

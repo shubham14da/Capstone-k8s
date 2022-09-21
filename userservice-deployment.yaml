@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  
+  
+  labels:
+    name: userservice
+  name: userservice
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      
+      labels:
+        name: userservice
+    spec:
+      containers:
+      - image: ashishrits081/userservice:latest
+        name: user-service-container
+        ports:
+        - containerPort: 8090
+        resources: {}
+      restartPolicy: Always
+status: {}

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  
+  
+  labels:
+    name: configserver
+  name: configserver
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      
+      labels:
+        name: configserver
+    spec:
+      containers:
+      - image: ashishrits081/configserver:latest
+        name: config-server-container
+        ports:
+        - containerPort: 8888
+        resources: {}
+      restartPolicy: Always
+status: {}

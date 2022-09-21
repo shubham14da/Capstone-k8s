@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  
+  
+  labels:
+    name: eurekaserver
+  name: eurekaserver
+spec:
+  ports:
+  - name: "8761"
+    port: 8761
+    targetPort: 8761
+  selector:
+    name: eurekaserver
+status:
+  loadBalancer: {}

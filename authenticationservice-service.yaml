@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  
+  
+  labels:
+    name: authenticationservice
+  name: authenticationservice
+spec:
+  ports:
+  - name: "8095"
+    port: 8095
+    targetPort: 8095
+  selector:
+    name: authenticationservice
+status:
+  loadBalancer: {}

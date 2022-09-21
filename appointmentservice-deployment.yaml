@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  
+  
+  labels:
+    name: appointmentservice
+  name: appointmentservice
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      
+      labels:
+        name: appointmentservice
+    spec:
+      containers:
+      - image: ashishrits081/appointmentservice:latest
+        name: appointment-service-container
+        ports:
+        - containerPort: 8097
+        resources: {}
+      restartPolicy: Always
+status: {}

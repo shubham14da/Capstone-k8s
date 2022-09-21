@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  
+  
+  labels:
+    name: emailservice
+  name: emailservice
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      
+      labels:
+        name: emailservice
+    spec:
+      containers:
+      - image: ashishrits081/emailservice:latest
+        name: email-service-container
+        ports:
+        - containerPort: 8075
+        resources: {}
+      restartPolicy: Always
+status: {}

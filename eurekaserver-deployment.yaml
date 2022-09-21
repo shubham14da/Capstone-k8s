@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  
+  
+  labels:
+    name: eurekaserver
+  name: eurekaserver
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      
+      labels:
+        name: eurekaserver
+    spec:
+      containers:
+      - image: ashishrits081/eurekaserver:latest
+        name: eureka-server-container
+        ports:
+        - containerPort: 8761
+        resources: {}
+      restartPolicy: Always
+status: {}

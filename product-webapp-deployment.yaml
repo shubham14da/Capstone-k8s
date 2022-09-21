@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  
+  
+  labels:
+    name: product-webapp
+  name: product-webapp
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      
+      labels:
+        name: product-webapp
+    spec:
+      containers:
+      - image: ashishrits081/product-webapp:latest
+        name: product-webapp
+        ports:
+        - containerPort: 4200
+        resources: {}
+      restartPolicy: Always
+status: {}
