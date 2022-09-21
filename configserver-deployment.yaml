@@ -19,7 +19,7 @@ spec:
         name: config-server-container
         env:
         - name: eureka.client.serviceUrl.defaultZone
-          value: http://eurekaserver:8761/eureka
+          value: eurekaserver.default.svc.cluster.local:8761/eureka
         ports:
         - containerPort: 8888
         resources: {}

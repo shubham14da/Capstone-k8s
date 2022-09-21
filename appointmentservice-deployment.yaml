@@ -21,7 +21,7 @@ spec:
         - name: eureka.client.serviceUrl.defaultZone
           value: http://eurekaserver:8761/eureka
         - name: spring.data.mongodb.uri
-          value: mongodb://mongodbservice:27017/fitpro
+          value: mongodb://mongodbservice.default.svc.cluster.local:27017/fitpro
         ports:
         - containerPort: 8097
         resources: {}
