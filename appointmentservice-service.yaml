@@ -5,7 +5,6 @@ metadata:
     name: appointmentservice
   name: appointmentservice
 spec:
-  clusterIP: 127.0.0.1
   ports:
   - name: "8097"
     port: 8097
