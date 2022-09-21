@@ -8,9 +8,9 @@ metadata:
   name: authenticationservice
 spec:
   ports:
-  - name: "8095"
-    port: 8095
-    targetPort: 8095
+  - name: "8091"
+    port: 8091
+    targetPort: 8091
   selector:
     name: authenticationservice
 status:

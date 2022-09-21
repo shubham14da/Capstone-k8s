@@ -23,7 +23,7 @@ spec:
         - name: spring.data.mongodb.uri
           value: mongodb://mongodbservice.default.svc.cluster.local:27017/fitpro
         ports:
-        - containerPort: 8097
+        - containerPort: 8090
         resources: {}
       restartPolicy: Always
 status: {}

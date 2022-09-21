@@ -21,7 +21,7 @@ spec:
         - name: spring.datasource.url
           value: jdbc:mysql://mysqlservice.default.svc.cluster.local:3306/AuthenticationDB
         ports:
-        - containerPort: 8095
+        - containerPort: 8091
         resources: {}
       restartPolicy: Always
 status: {}

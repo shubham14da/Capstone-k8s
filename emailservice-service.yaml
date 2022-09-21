@@ -8,9 +8,9 @@ metadata:
   name: emailservice
 spec:
   ports:
-  - name: "8075"
-    port: 8075
-    targetPort: 8075
+  - name: "8088"
+    port: 8088
+    targetPort: 8088
   selector:
     name: emailservice
 status:

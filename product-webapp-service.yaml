@@ -8,9 +8,9 @@ metadata:
   name: product-webapp
 spec:
   ports:
-  - name: "4200"
-    port: 4200
-    targetPort: 4200
+  - name: "8087"
+    port: 8087
+    targetPort: 8087
   selector:
     name: product-webapp
 status:

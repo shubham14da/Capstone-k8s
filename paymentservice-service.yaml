@@ -8,9 +8,9 @@ metadata:
   name: paymentservice
 spec:
   ports:
-  - name: "8070"
-    port: 8070
-    targetPort: 8070
+  - name: "8089"
+    port: 8089
+    targetPort: 8089
   selector:
     name: paymentservice
 status:

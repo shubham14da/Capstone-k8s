@@ -21,7 +21,7 @@ spec:
         - name: eureka.client.serviceUrl.defaultZone
           value: http://eurekaserver.default.svc.cluster.local:8761/eureka
         ports:
-        - containerPort: 4200
+        - containerPort: 8087
         resources: {}
       restartPolicy: Always
 status: {}
