@@ -17,6 +17,9 @@ spec:
       containers:
       - image: ashishrits081/paymentservice:latest
         name: payment-service-container
+        env:
+        - name: eureka.client.serviceUrl.defaultZone
+          value: http://eurekaserver:8761/eureka
         ports:
         - containerPort: 8070
         resources: {}

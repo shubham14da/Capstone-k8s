@@ -17,6 +17,9 @@ spec:
       containers:
       - image: ashishrits081/product-webapp:latest
         name: product-webapp
+        env:
+        - name: eureka.client.serviceUrl.defaultZone
+          value: http://eurekaserver:8761/eureka
         ports:
         - containerPort: 4200
         resources: {}

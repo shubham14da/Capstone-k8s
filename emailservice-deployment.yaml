@@ -17,6 +17,9 @@ spec:
       containers:
       - image: ashishrits081/emailservice:latest
         name: email-service-container
+        env:
+        - name: spring.rabbitmq.host
+          value: rabbitmq
         ports:
         - containerPort: 8075
         resources: {}

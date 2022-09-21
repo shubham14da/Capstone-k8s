@@ -17,6 +17,9 @@ spec:
       containers:
       - image: ashishrits081/authenticationservice:latest
         name: authentication-service-container
+        env:
+        - name: spring.datasource.url
+          value: jdbc:mysql://mysqlservice:3306/AuthenticationDB
         ports:
         - containerPort: 8095
         resources: {}
