@@ -21,6 +21,18 @@ spec:
         env:
         - name: eureka.client.serviceUrl.defaultZone
           value: http://eurekaserversvc:8761/eureka
+        - name: paymentservicesvc
+          value: paymentservicesvc
+        - name: authenticationservicesvc
+          value: authenticationservicesvc
+        - name: emailservicesvc
+          value: emailservicesvc
+        - name: appointmentservicesvc
+          value: appointmentservicesvc
+        - name: userservicesvc
+          value: userservicesvc
+        - name: productwebappsvc
+          value: productwebappsvc
         ports:
         - containerPort: 8080
         resources: {}
