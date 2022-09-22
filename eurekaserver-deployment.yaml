@@ -19,6 +19,21 @@ spec:
         name: eureka-server-container
         ports:
         - containerPort: 8761
+        env:
+        - name: MY_POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+          # Due to camelcase issues with "defaultZone" and "preferIpAddress", _JAVA_OPTIONS is used here
+        - name: _JAVA_OPTIONS
+          value: -Deureka.instance.preferIpAddress=false -Deureka.client.serviceUrl.defaultZone=http://eurekaserversvc:8761/eureka/
+        - name: EUREKA_CLIENT_REGISTERWITHEUREKA
+          value: "true"
+        - name: EUREKA_CLIENT_FETCHREGISTRY
+          value: "true"
+        # The hostnames must match with the the eureka serviceUrls, otherwise the replicas are reported as unavailable in the eureka dashboard      
+        - name: EUREKA_INSTANCE_HOSTNAME
+          value: eurekaserversvc
         resources: {}
       restartPolicy: Always
 status: {}
