@@ -35,4 +35,6 @@ spec:
         # The hostnames must match with the the eureka serviceUrls, otherwise the replicas are reported as unavailable in the eureka dashboard      
         - name: EUREKA_INSTANCE_HOSTNAME
           value: eurekaserversvc
+        - name: eureka.client.serviceUrl.default-zone
+          value: http://eurekaserversvc/8761/eureka/
 
