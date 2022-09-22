@@ -1,6 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: capstone
   labels:
     name: configserver
   name: configserver
