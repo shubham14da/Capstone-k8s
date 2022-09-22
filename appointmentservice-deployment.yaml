@@ -19,9 +19,9 @@ spec:
         name: appointment-service-container
         env:
         - name: eureka.client.serviceUrl.defaultZone
-          value: http://eurekaserversvc.default.svc.cluster.local:8761/eureka
+          value: http://eurekaserversvc:8761/eureka
         - name: spring.data.mongodb.uri
-          value: mongodb://mongodbservicesvc.default.svc.cluster.local:27017/fitpro
+          value: mongodb://mongodbservicesvc:27017/fitpro
         ports:
         - containerPort: 8090
         resources: {}

@@ -19,7 +19,7 @@ spec:
         name: api-gateway-container
         env:
         - name: eureka.client.serviceUrl.defaultZone
-          value: http://eurekaserversvc.default.svc.cluster.local:8761/eureka
+          value: http://eurekaserversvc:8761/eureka
         ports:
         - containerPort: 8080
         resources: {}

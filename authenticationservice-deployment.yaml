@@ -19,7 +19,7 @@ spec:
         name: authentication-service-container
         env:
         - name: spring.datasource.url
-          value: jdbc:mysql://mysqlservicesvc.default.svc.cluster.local:3306/AuthenticationDB
+          value: jdbc:mysql://mysqlservicesvc:3306/AuthenticationDB
         ports:
         - containerPort: 8091
         resources: {}

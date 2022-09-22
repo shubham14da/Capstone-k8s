@@ -1,0 +1,91 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: mainpod
+  name: mainpod
+spec:
+  type: NodePort
+  ports:
+  - name: "8080"
+    port: 8080
+    nodePort: 30036
+  selector:
+    name: mainpod
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    name: mainpod
+  name: mainpod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: mainpod
+  template:
+    metadata:
+      labels:
+        name: mainpod
+    spec:
+      containers:
+      - name: api-gateway-container
+        image: ashishrits081/api-gateway:latest
+        ports:
+        - containerPort: 8080
+      - name: appointment-service-container 
+        image: ashishrits081/appointmentservice:latest
+        ports:
+        - containerPort: 8097
+      - name: authentication-service-container 
+        image: ashishrits081/authenticationservice:latest
+        ports:
+        - containerPort: 8095
+      - name: config-server-container
+        image: ashishrits081/configserver:latest
+        ports:
+        - containerPort: 8888
+      - name: email-service-container
+        image: ashishrits081/emailservice:latest
+        ports:
+        - containerPort: 8075
+      - name: eureka-server-container 
+        image: ashishrits081/eurekaserver:latest
+        ports:
+        - containerPort: 8761
+      - name: mongo-container
+        image: ashishrits081/mongo:latest
+        ports:
+        - containerPort: 27017
+      - name: mysql-container
+        env:
+        - name: MYSQL_ALLOW_EMPTY_PASSWORD
+          value: "yes"
+        - name: MYSQL_DATABASE
+          value: AuthenticationDB
+        - name: MYSQL_ROOT_PASSWORD
+          value: Global@145#
+        - name: MYSQL_USERNAME
+          value: root
+        image: ashishrits081/mysql:latest
+        ports:
+        - containerPort: 3306
+      - name: payment-service-container
+        image: ashishrits081/paymentservice:latest
+        ports:
+        - containerPort: 8070
+      - name: product-webapp
+        image: ashishrits081/product-webapp:latest
+        ports:
+        - containerPort: 4200
+      - name: rabbitmq
+        image: ashishrits081/rabbitmq:latest
+        ports:
+        - containerPort: 5672
+        - containerPort: 15672
+      - name: user-service-container
+        image: ashishrits081/userservice:latest
+        ports:
+        - containerPort: 8090

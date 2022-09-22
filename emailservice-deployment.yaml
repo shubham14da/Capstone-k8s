@@ -19,7 +19,7 @@ spec:
         name: email-service-container
         env:
         - name: spring.rabbitmq.host
-          value: rabbitmqsvc.default.svc.cluster.local
+          value: rabbitmqsvc
         ports:
         - containerPort: 8088
         resources: {}
