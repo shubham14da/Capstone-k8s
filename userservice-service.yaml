@@ -7,10 +7,11 @@ metadata:
     name: userservice
   name: userservice
 spec:
+  type: NodePort
   ports:
   - name: "8083"
     port: 8083
-    targetPort: 8083
+    nodePort: 30048
   selector:
     name: userservice
 status:

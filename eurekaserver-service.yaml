@@ -7,10 +7,11 @@ metadata:
     name: eurekaserver
   name: eurekaserver
 spec:
+  type: NodePort
   ports:
   - name: "8761"
     port: 8761
-    targetPort: 8761
+    nodePort: 30041
   selector:
     name: eurekaserver
 status:

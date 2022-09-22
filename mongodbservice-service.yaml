@@ -7,10 +7,11 @@ metadata:
     name: mongodbservice
   name: mongodbservice
 spec:
+  type: NodePort
   ports:
   - name: "27017"
     port: 27017
-    targetPort: 27017
+    nodePort: 30042
   selector:
     name: mongodbservice
 status:

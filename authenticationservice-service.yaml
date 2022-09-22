@@ -7,10 +7,11 @@ metadata:
     name: authenticationservice
   name: authenticationservice
 spec:
+  type: NodePort
   ports:
   - name: "8091"
     port: 8091
-    targetPort: 8091
+    nodePort: 30038
   selector:
     name: authenticationservice
 status:

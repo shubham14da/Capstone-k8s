@@ -7,10 +7,11 @@ metadata:
     name: product-webapp
   name: product-webapp
 spec:
+  type: NodePort
   ports:
   - name: "8087"
     port: 8087
-    targetPort: 8087
+    nodePort: 30045
   selector:
     name: product-webapp
 status:

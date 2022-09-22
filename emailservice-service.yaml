@@ -7,10 +7,11 @@ metadata:
     name: emailservice
   name: emailservice
 spec:
+  type: NodePort
   ports:
   - name: "8088"
     port: 8088
-    targetPort: 8088
+    nodePort: 30040
   selector:
     name: emailservice
 status:

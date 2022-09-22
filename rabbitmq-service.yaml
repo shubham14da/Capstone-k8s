@@ -7,13 +7,14 @@ metadata:
     name: rabbitmq
   name: rabbitmq
 spec:
+  type: NodePort
   ports:
   - name: "5672"
     port: 5672
-    targetPort: 5672
+    nodePort: 30046
   - name: "15672"
     port: 15672
-    targetPort: 15672
+    nodePort: 30047
   selector:
     name: rabbitmq
 status:
