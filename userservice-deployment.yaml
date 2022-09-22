@@ -30,6 +30,10 @@ spec:
           value: http://eurekaserver.default.svc.cluster.local:8761/eureka
         - name: spring.data.mongodb.host
           value: mongodbservice.default.svc.cluster.local
+        - name: Domain
+          value: localhosteureka.client.serviceUrl.defaultZone=http://eurekaserver.default.svc.cluster.local:8761/eureka
+        - name: logout_redirect_url
+          value: http://product-webapp.default.svc.cluster.local:8087/#/
         ports:
         - containerPort: 8083
         resources: {}
