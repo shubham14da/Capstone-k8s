@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   labels:
     name: mysqlservice
@@ -28,6 +28,4 @@ spec:
         name: mysql-container
         ports:
         - containerPort: 3306
-        resources: {}
       restartPolicy: Always
-status: {}

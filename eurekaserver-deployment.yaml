@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   labels:
     name: eurekaserver
@@ -34,6 +34,4 @@ spec:
         # The hostnames must match with the the eureka serviceUrls, otherwise the replicas are reported as unavailable in the eureka dashboard      
         - name: EUREKA_INSTANCE_HOSTNAME
           value: eurekaserversvc
-        resources: {}
-      restartPolicy: Always
-status: {}
+
