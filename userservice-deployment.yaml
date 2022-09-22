@@ -19,21 +19,21 @@ spec:
         name: user-service-container
         env:
         - name: enthusiast_home_page_url
-          value: http://product-webapp.default.svc.cluster.local:8087/#/innovators
+          value: http://productwebappsvc.default.svc.cluster.local:8087/#/innovators
         - name: expert_home_page_url
-          value: http://product-webapp.default.svc.cluster.local:8087/#/experts
+          value: http://productwebappsvc.default.svc.cluster.local:8087/#/experts
         - name: enthusiast_redirect_url
-          value: http://userservice.default.svc.cluster.local:8083/api/v1/authorize/enthusiast/complete
+          value: http://userservicesvc.default.svc.cluster.local:8083/api/v1/authorize/enthusiast/complete
         - name: expert_redirect_url
-          value: http://userservice.default.svc.cluster.local:8083/api/v1/authorize/expert/complete
+          value: http://userservicesvc.default.svc.cluster.local:8083/api/v1/authorize/expert/complete
         - name: eureka.client.serviceUrl.defaultZone
-          value: http://eurekaserver.default.svc.cluster.local:8761/eureka
+          value: http://eurekaserversvc.default.svc.cluster.local:8761/eureka
         - name: spring.data.mongodb.host
           value: mongodbservice.default.svc.cluster.local
         - name: Domain
-          value: localhosteureka.client.serviceUrl.defaultZone=http://eurekaserver.default.svc.cluster.local:8761/eureka
+          value: localhosteureka.client.serviceUrl.defaultZone=http://eurekaserversvc.default.svc.cluster.local:8761/eureka
         - name: logout_redirect_url
-          value: http://product-webapp.default.svc.cluster.local:8087/#/
+          value: http://productwebappsvc.default.svc.cluster.local:8087/#/
         ports:
         - containerPort: 8083
         resources: {}
