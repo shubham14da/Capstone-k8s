@@ -5,7 +5,7 @@ metadata:
   
   labels:
     name: mongodbservice
-  name: mongodbservice
+  name: mongodbservicesvc
 spec:
   type: NodePort
   ports:

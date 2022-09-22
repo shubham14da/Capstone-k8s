@@ -5,7 +5,7 @@ metadata:
   
   labels:
     name: mysqlservice
-  name: mysqlservice
+  name: mysqlservicesvc
 spec:
   type: NodePort
   ports:

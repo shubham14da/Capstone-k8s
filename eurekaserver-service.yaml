@@ -5,7 +5,7 @@ metadata:
   
   labels:
     name: eurekaserver
-  name: eurekaserver
+  name: eurekaserversvc
 spec:
   type: NodePort
   ports:

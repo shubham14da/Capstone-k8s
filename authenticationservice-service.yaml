@@ -5,7 +5,7 @@ metadata:
   
   labels:
     name: authenticationservice
-  name: authenticationservice
+  name: authenticationservicesvc
 spec:
   type: NodePort
   ports:

@@ -3,7 +3,7 @@ kind: Service
 metadata:
   labels:
     name: appointmentservice
-  name: appointmentservice
+  name: appointmentservicesvc
 spec:
   type: NodePort
   ports:

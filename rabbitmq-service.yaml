@@ -5,7 +5,7 @@ metadata:
   
   labels:
     name: rabbitmq
-  name: rabbitmq
+  name: rabbitmqsvc
 spec:
   type: NodePort
   ports:

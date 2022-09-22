@@ -3,7 +3,7 @@ kind: Service
 metadata:
   labels:
     name: api-gateway
-  name: api-gateway
+  name: apigatewaysvc
 spec:
   type: NodePort
   ports:

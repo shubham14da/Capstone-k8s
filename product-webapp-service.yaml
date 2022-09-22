@@ -5,7 +5,7 @@ metadata:
   
   labels:
     name: product-webapp
-  name: product-webapp
+  name: productwebappsvc
 spec:
   type: NodePort
   ports:
