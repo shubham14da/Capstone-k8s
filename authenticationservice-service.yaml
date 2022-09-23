@@ -11,7 +11,6 @@ spec:
   ports:
   - name: "8091"
     port: 8091
-    nodePort: 30038
   selector:
     name: authenticationservice
 status:

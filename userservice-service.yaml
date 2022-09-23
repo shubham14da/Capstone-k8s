@@ -10,8 +10,7 @@ spec:
   type: NodePort
   ports:
   - name: "8083"
-    port: 8083
-    nodePort: 30048
+    port: 8083S
   selector:
     name: userservice
 status:

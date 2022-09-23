@@ -10,7 +10,6 @@ spec:
   ports:
   - name: "8090"
     port: 8090
-    nodePort: 30037
   selector:
     name: appointmentservice
 status:
