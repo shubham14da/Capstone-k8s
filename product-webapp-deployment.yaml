@@ -16,7 +16,7 @@ spec:
         name: product-webapp
     spec:
       containers:
-      - image: ashishrits081/product-webapp:latest
+      - image: shubh1254/product-webapp:latest
         name: product-webapp
         env:
         - name: eureka.client.serviceUrl.defaultZone

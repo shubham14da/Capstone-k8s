@@ -16,7 +16,7 @@ spec:
         name: emailservice
     spec:
       containers:
-      - image: ashishrits081/emailservice:latest
+      - image: shubh1254/emailservice:latest
         name: email-service-container
         env:
         - name: spring.rabbitmq.host

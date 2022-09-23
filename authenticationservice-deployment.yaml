@@ -16,7 +16,7 @@ spec:
         name: authenticationservice
     spec:
       containers:
-      - image: ashishrits081/authenticationservice:latest
+      - image: shubh1254/authenticationservice:latest
         name: authentication-service-container
         env:
         - name: spring.datasource.url

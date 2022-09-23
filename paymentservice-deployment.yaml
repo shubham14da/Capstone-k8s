@@ -16,7 +16,7 @@ spec:
         name: paymentservice
     spec:
       containers:
-      - image: ashishrits081/paymentservice:latest
+      - image: shubh1254/paymentservice:latest
         name: payment-service-container
         env:
         - name: eureka.client.serviceUrl.defaultZone

@@ -16,7 +16,7 @@ spec:
         name: eurekaserver
     spec:
       containers:
-      - image: ashishrits081/eurekaserver:latest
+      - image: shubh1254/eurekaserver:latest
         name: eureka-server-container
         ports:
         - containerPort: 8761

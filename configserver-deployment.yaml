@@ -16,7 +16,7 @@ spec:
         name: configserver
     spec:
       containers:
-      - image: ashishrits081/configserver:latest
+      - image: shubh1254/configserver:latest
         name: config-server-container
         env:
         - name: eureka.client.serviceUrl.defaultZone

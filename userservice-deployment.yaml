@@ -16,7 +16,7 @@ spec:
         name: userservice
     spec:
       containers:
-      - image: ashishrits081/userservice:latest
+      - image: shubh1254/userservice:latest
         name: user-service-container
         env:
         - name: enthusiast_home_page_url

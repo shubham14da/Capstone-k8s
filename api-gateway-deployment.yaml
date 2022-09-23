@@ -16,7 +16,7 @@ spec:
         name: api-gateway
     spec:
       containers:
-      - image: ashishrits081/api-gateway:latest
+      - image: shubh1254/api-gateway:latest
         name: api-gateway-container
         env:
         - name: eureka.client.serviceUrl.defaultZone

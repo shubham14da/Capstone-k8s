@@ -16,7 +16,7 @@ spec:
         name: appointmentservice
     spec:
       containers:
-      - image: ashishrits081/appointmentservice:latest
+      - image: shubh1254/appointmentservice:latest
         name: appointment-service-container
         env:
         - name: eureka.client.serviceUrl.defaultZone
